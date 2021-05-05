@@ -1,0 +1,88 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<meta charset = "UTF-8">
+		<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+		<meta http-equiv = "X-UA-Compatible" content = "ie=edge">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<title>Product Quality • Simulate</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<div class="alert alert-success" id="buttonAlertSuc" style="display: none;">
+          <strong>Congrats!!</strong> for your Attempt, you can check the answer below..
+		</div>
+		<div class="div1">
+			<span class="heading1"><b>VLAB - Product Quality</b></span>
+		</div>
+		<div class="div2">
+			<nav>
+				<div class="container">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<!--li><a href="#">Tutorials</a>
+							<ul>
+								<li><a href="tutorial_compatibility.html">Compatibility</a></li>
+								<li><a href="tutorial_suman.html">Functional Suitability</a></li>
+								<li><a href = "tutorial-reliability.html">Reliability Metrics</a></li> 
+							</ul>
+						</li-->
+						<li><a href="#">Practice</a>
+							<ul>
+								<li><a href="Learn.html">Code Quality Analysis</a></li>
+								<li><a href="ex_html_css_js.html">Practice JS</a></li>
+								<li><a href="CP.html">Cyclomatic Complexity Practice</a></li>
+							</ul>
+						</li>
+						<li><a href="quiz.html">Quiz</a></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+		<div class="div_para">
+			<p class="para">Cyclomatic complexity is one of the metric to compute the complexity of a code. More the complexity, difficult the code to maintain. Once we get know how to compute Cyclomatic complexity, we can analyze the code and try to write less complex code which will help us to build a good quality prouct.</p><p>Cyclomatic complexity is computed using the Control Flow Graph of the program. The nodes in the graph indicate the smallest group of commands of a program, and a directed edge in it connects the two nodes i.e. if second command might immediately follow the first command.Mathematically, for a structured program, the directed graph inside control flow is the edge joining two basic blocks of the program as control may pass from first to second.<br>So, cyclomatic complexity M would be defined as,<b> M = E - N + 2P </b><br>where, E = the number of edges in the control flow graph, N = the number of nodes in the control flow graph, P = the number of connected components  </p><p> </p>
+<p>For example consider the below code snippet & graph 	
+			<div >
+
+				<div style="margin: auto; width: 50%">
+				  <img alt="func_suit_char" src="images/Code.PNG"/>
+				  <img alt="func_suit_char" src="images/graph.png"/>
+				</div>
+			</div>
+			<p class="para">
+				<br>Similarly try to draw a Cyclomatic graph for the below given code snnipet</p>
+			<p class="para"><b>Instruction</b></p>
+			<ul>
+				<li>Click on the Nodes button to select the appropriate node</li>
+				<li> Select Node to move it to required position</li> 
+				<li>Click on toggle drawing to draw lines between nodes and click again to draw nodes</li>
+				<li>After completion click on finish</li>
+			</ul>	
+				  <div style="margin: auto; width: 50%">
+
+    				<img alt="func_suit_char" src="images/Code1.PNG"/>
+				<p></p>
+				<button onclick="toggleMode(modes.drawing)">Toggle Drawing</button>
+   				 <button onclick="clearCanvas(canvas, svgState)">Clear</button>
+   				 <button onclick="restoreCanvas(canvas, svgState, bgUrl)">Restore</button>
+    				<canvas id="canvas"></canvas>
+				
+				
+				 <b> Nodes : - </b>    				
+				<button onclick="createEllps(canvas)">Start</button>
+                		<button onclick="createEllps(canvas)">End</button>
+				<button onclick="createRect1(canvas)">Condition</button>
+                		<button onclick="createRect2(canvas)">Statement</button>
+					
+	
+				<br>
+				<button onclick="pass_func1()">Finish</button>
+ 				<img id="bigpic" src="https://maps.gstatic.com/mapfiles/markers2/dd-via-transparent.png" alt="" />
+        			</div>
+				</div>
+		<script src="js/lib/jscolor.js"></script>
+		<script src="js/lib/fabric.min.js"></script>
+		<script src="js/CP.js"></script>
+	</body>
+</html>

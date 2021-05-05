@@ -1,0 +1,142 @@
+﻿<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset = "UTF-8">
+		<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+		<meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<title>Product Quality • Simulate</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<div class="alert alert-success" id="buttonAlertSuc" style="display: none;">
+          <strong>Correct!!</strong> It is indeed the strongest of the lot..
+		</div>
+		<div class="alert alert-danger" id="buttonAlertFai" style="display: none;">
+          <strong>Oops!!</strong> It seems like a weak password..
+		</div>
+		<div class="alert alert-success" id="buttonAlertSuc2" style="display: none;">
+          <strong>Well done!!</strong> Your thinking is correct.. 
+		</div>
+		<div class="alert alert-danger" id="buttonAlertFai2" style="display: none;">
+          <strong>Oops!!</strong> You need to think a bit more..
+		</div>
+		<div class="div1">
+			<span class="heading1"><b>VLAB - Product Quality</b></span>
+		</div>
+		<div class="div2">
+			<nav>
+				<div class="container">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="#">Practice</a>
+							<ul>
+								<li><a href="Learn.html">Code Quality Analysis</a></li>
+								<li><a href="ex_html_css_js.html">Practice JS</a></li>
+								<li><a href="CP.html">Cyclomatic Complexity Practice</a></li>
+							</ul>
+						</li>
+						<li><a href="quiz.html">Quiz</a></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+		<div class="div_para">
+			<h3><b>Practice - Security</b></h3>
+			<p class="div_para4">&emsp;Let's just have a look at an example to illustrate the <b>Security</b> attribute of Product Quality.
+				To ensure security in a good software product, a password set by an user MUST be a strong one. To ensure its strength, 
+				we developers need to validate certain criterias when an user creates a new password.<br>Now let's see how much
+				you have understood the <b>Security</b> attribute from the tutorials by answering the following question:
+			</p>
+			<div class="div_radio1">
+				<p class="div_para4"><b>Q1.</b> Which of these passwords seems to be the strongest?</p>
+				<form autocomplete="off">
+					<div class="div_radio1_1">
+						<input type="radio" id="pass1" name="pass1" value="pass1">
+						<label for="pass1" id="lb1" class="lb1">Amit@123</label>
+					</div>
+					<div class="div_radio1_2">
+						<input type="radio" id="pass2" name="pass1" value="pass2">
+						<label for="pass2" id="lb2" class="lb2">WeLC23@11it!</label>
+					</div>
+					<div class="div_radio1_3">
+						<input type="radio" id="pass3" name="pass1" value="pass3">
+						<label for="pass3" id="lb3" class="lb3">qwertyuiop</label>
+					</div>
+				</form>
+				<div class="div_radio1_4">
+					<button id="js_button" value="Submit" onclick="pass_func1()">Submit</button>
+				</div>
+			</div>
+			<br><br>
+			<div class="div_checkbox1" id="cb1" style="display: none;">
+				<p class="div_para4"><b>Q2.</b> According to you, which of the following characterisitics MUST be implemented by a developer
+				for validating a password? (MORE THAN ONE Answers can be selected)</p>
+				<div class="div_checkbox">
+					<form autocomplete="off">
+						<input type="checkbox" id="check1" name="pass_check" value="check1">
+						<label for="check1"> The password should be atleast 8 characters long.</label><br>
+						
+						<input type="checkbox" id="check3" name="pass_check" value="check3">
+						<label for="check3"> A mixture of numbers, upper-case and lower-case letters MUST be there.</label><br>
+						<input type="checkbox" id="check4" name="pass_check" value="check4">
+						<label for="check4"> Any special character(s) can be present in the password.</label><br>
+						
+						<input type="checkbox" id="check6" name="pass_check" value="check6">
+						<label for="check6"> NOT ALL special characters are allowed.</label><br>
+						<input type="checkbox" id="check7" name="pass_check" value="check7">
+						<label for="check7"> There shouldn't be any lower-bound to the length of the password.</label><br>
+					</form>
+					<div class="check_button">
+						<button id="js_button2" value="Submit2" onclick="pass_func_cb()">Submit</button>
+					</div>
+				</div>
+			</div>
+			<br/><br/>
+			<div class="bonus_exer" id="bonus" style="display: none;">
+				<h3 style="color: yellow"><b>Bonus Exercise for Practice (using JS/CSS)</b></h3>
+				<p class="div_para3">
+					As you answered correctly above, these are the basic criterias for a password to be strong:<br>
+				</p>
+				<ul class="div_para3">
+					<li class="li_cb">The password should be atleast 8 characters long.</li>
+					<li class="li_cb">It should be a mixture of numbers, upper-case and lower-case letters</li>
+					<li class="li_cb">It should contain atleast one special character.</li>
+					<li class="li_cb">Allowed special characters are: <span>@, #, $, _, &, !, ?</span></li>
+				</ul>
+				<p class="div_para3"><b>Q3.</b> Using the information above, you can implement this Practice Exercise for the user 
+					where he/she will try to create a new password and the password MUST match all the above criterias to get created successfully.
+					The initial HTML/CSS code is already given. The user just has to complete the given JavaScript function 
+					<b>check_pass_strength()</b> inside the script tag. 
+				</p>
+				<p class="div_para3"><b>Expected Output:</b> On pressing the <b>Submit</b> button, an alert box should pop-up 
+				showing if the password is Weak or Strong.
+				</p>
+				<div class="ed" id="editor">&lt;!-- HTML/JS Code --&gt;
+	&lt;div style="margin: 1%"&gt;New Password: &lt;input id="uname"&gt;&lt;/div&gt;
+	&lt;div style="margin: 1%"&gt;Re-Enter New Password: &lt;input type="password" id="pass"&gt;&lt;/div&gt;
+	&lt;div style="margin-left: 10%"&gt;&lt;button class="button" onClick="check_pass_strength()"&gt;Submit&lt;/button&gt;&lt;/div&gt;
+	&lt;script&gt;
+		function check_pass_strength() {
+			//WRITE YOUR JS CODE HERE...
+			
+		}
+	&lt;/script&gt;</div>
+				<div class="ed2" id="editor2">/* CSS Code */
+	.button {
+		border: 2px solid blue;
+		border-radius: 15%;
+	}
+	/*WRITE YOUR CSS CODE HERE...*/
+	</div>
+				<br><br>
+				<p class="div_para3">OUTPUT:</p>
+				<iframe class="res" id="result" style="border: none;"></iframe>
+			</div>
+		</div>
+		<script src="js/ace.js"></script>
+		<script src="js/ace_helper_script.js"></script>
+		<script src="js/jquery.js"></script>
+	</body>
+</html>

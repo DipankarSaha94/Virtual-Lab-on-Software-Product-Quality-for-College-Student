@@ -1,0 +1,177 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<meta charset = "UTF-8">
+		<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+		<meta http-equiv = "X-UA-Compatible" content = "ie-edge">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<title>Product Quality • Tutorial</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="resources/css/slider.css">
+		<link rel="stylesheet" type="text/css" href="resources/css/style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<div class="div1">
+			<span class="heading1"><b>VLAB - Product Quality</b></span>
+		</div>
+		<div class="div2">
+			<nav>
+				<div class="container">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="#">Practice</a>
+							<ul>
+								<li><a href="Learn.html">Code Quality Analysis</a></li>
+								<li><a href="ex_html_css_js.html">Practice JS</a></li>
+								<li><a href="CP.html">Cyclomatic Complexity Practice</a></li>
+							</ul>
+						</li>
+						<li><a href="quiz.html">Quiz</a></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+		<div class="div_para">
+			<h3 class="heading_center"><em>Why Code Quality Matters</em></h3>
+			<p style="text-align: center"> The quality of your code is important, as it impacts the overall software quality. And quality impacts how safe, secure and reliable your codebase is.</p>
+			<div class="drop_ques"> 
+				<br/>
+				Choose a type:
+				<select> 
+					<option>Select..</option> 
+					<option value="Q1">High Cohesion</option> 
+					<option value="Q2">Loose Coupling</option> 
+					<option value="Q3">Simple Code v/s Unnecessarily Complicated Code</option>
+				</select> 
+			</div> 
+			<br/>
+			<br/>
+			<br/>
+			<div class="alert alert-success" id="buttonAlertSuc" style="display: none;">
+				<strong>Your Answer is Correct!!</strong>
+			</div>
+			<div class="alert alert-danger" id="buttonAlertFai" style="display: none;">
+				<strong>Oops!!</strong> Your answer is incorrect. Please try again </strong>
+			</div>
+			<div class="Q1 metrics">
+				<div class="c_code_ques">
+					<span style = "text-align: center"><b>Cohesion</b></span><br />
+					Cohesion represents the degree to which a part of a code base forms a logically single, atomic unit.<br />
+					<b>Task:</b> Basic Calculator. Input two numbers as the command line arguments and enter a character among ('+', '-', '*' or '/') as standard input.
+				</div>
+				<br />
+				<div class = "c_code_ques"> 
+				<p>Example of a <b>Bad Code</b>.<br />
+				</div>
+				<div class = "c-code" data-pym-src="https://www.jdoodle.com/embed/v0/2CRV"></div>
+				<br />
+				<div class="div_checkbox1" id="cb1">
+					<p class="div_para4 c_code_ques"><b>Q1.</b> Why is the above code "bad"? (MORE THAN ONE answers can be selected)</p>
+					<div class="div_checkbox c_code_ques">
+						<input type="checkbox" id="pass1" name="pass1" value="pass1" autocomplete="off">
+						<label for="check1"> One function contains code for all the operations.</label><br>
+						<input type="checkbox" id="pass2" name="pass2" value="pass2" autocomplete="off">
+						<label for="check3"> There is very little Cohesion.</label><br>
+						<input type="checkbox" id="pass3" name="pass3" value="pass3" autocomplete="off">
+						<label for="check7"> This is not a bad code.</label><br>
+						<div class="check_button">
+							<button id="js_button" value="Submit2" onclick="pass_func_code()">Submit</button>
+						</div>
+					</div>
+				</div>
+				<br />
+				<hr />
+				<br />
+				<div id ="good-code-wrapper" style="display: none;">
+					<div class = "c_code_ques">
+					<p>Example of a <b>Good Code</b>.<br />
+					Below code is good, because there is high level of cohesion in each of the functions</p>
+					</div>
+					<br />
+					<div class = "c-code" data-pym-src="https://www.jdoodle.com/embed/v0/2CRD"></div>
+				</div>
+			</div>
+			<div class="Q2 metrics">
+				<div class="c_code_ques">
+					<b>Coupling</b><br />
+					Coupling represents the degree to which a single unit is independent from others.
+				</div>
+				<br />
+				<div class="c_code_ques"> 
+				<p>Example of a <b>Bad Code</b></p>
+				</div>
+				<div class = "c-code" data-pym-src="https://www.jdoodle.com/embed/v0/2CSr"></div>
+				<br />
+				<div class="div_checkbox1" id="cb2">
+					<p class="div_para4 c_code_ques"><b>Q1.</b> Why is the above code "bad"? (MORE THAN ONE answers can be selected)</p>
+					<div class="div_checkbox c_code_ques">
+						<input type="checkbox" id="pass4" name="pass4" value="pass4" autocomplete="off">
+						<label for="check1"> There is high level of coupling between class Volume and class Box.</label><br>
+						<input type="checkbox" id="pass5" name="pass5" value="pass5" autocomplete="off">
+						<label for="check3"> A small change in the variable `volume` inside class Box can directly affect class Volume.</label><br>
+						<input type="checkbox" id="pass6" name="pass6" value="pass6" autocomplete="off">
+						<label for="check7"> This is not a bad code.</label><br>
+						<div class="check_button">
+							<button id="js_button" value="Submit2" onclick="pass_func_code2()">Submit</button>
+						</div>
+					</div>
+				</div>
+				<br />
+				<hr />
+				<br />
+				<div id ="good-code-wrapper2" style="display: none;">
+					<div class="c_code_ques"> 
+					<p>Example of a <b>Good Code</b>. <br />
+					Below code is good, because there is loose coupling between classes Volume and class Box. A change to class Box does not directly affect Volume class.</p>
+					</div>
+					<br />
+					<div class = "c-code" data-pym-src="https://www.jdoodle.com/embed/v0/2CSz"></div>
+				</div>
+			</div>
+			<div class="Q3 metrics">
+				<div id="left_div">
+					<div class="c_code_ques">
+						<span><b>Simple Code</b></span><br />
+					</div>
+					<div class="c_code_ques"> <br />
+					<p>Example of a <b>Good Code</b>.<br />
+					Below code is good, because the summation of the array elements is done in a straightforward manner, which in this case is the easiest and the most efficient.</p>
+					</div>
+					<br />
+					<div class = "c-code" data-pym-src="https://www.jdoodle.com/embed/v0/2CSQ"></div>
+				</div>
+				<div id="right_div">
+					<div class="c_code_ques">
+						<span><b>Unnecessary Complicated Code</b></span><br />
+					</div>
+					<div class="c_code_ques"> <br />
+					<p>Example of a <b>Bad Code</b>.
+					Below code is bad, because an unnecessary while loop has been added which complicates the simple code. </p>
+					</div>
+					<br />
+					<div class = "c-code" data-pym-src="https://www.jdoodle.com/embed/v0/2CSS"></div>
+				</div>
+			</div>
+			<script src="js/jquery.js"></script>
+			<script src="https://www.jdoodle.com/assets/jdoodle-pym.min.js" type="text/javascript"></script>
+			<script src = "resources/js/slider.js"></script>
+			<script type="text/javascript"> 
+				$(document).ready(function() { 
+					$("select").on('change', function() { 
+						$(this).find("option:selected").each(function() { 
+							var geeks = $(this).attr("value"); 
+							if (geeks) { 
+								$(".metrics").not("." + geeks).hide(); 
+								$("." + geeks).slideDown(1000); 
+							} else { 
+								$(".metrics").hide(); 
+							} 
+	  
+						}); 
+					}).change(); 
+				}); 
+			</script> 
+		</div>
+	</body>
+</html>

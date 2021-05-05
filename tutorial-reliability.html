@@ -1,0 +1,129 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<meta charset = "UTF-8">
+		<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+		<meta http-equiv = "X-UA-Compatible" content = "ie-edge">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<title>Product Quality • Tutorial</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="resources/css/slider.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<div class="div1">
+			<span class="heading1"><b>VLAB - Product Quality</b></span>
+		</div>
+		<div class="div2">
+			<nav>
+				<div class="container">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<!--li><a href="#">Tutorials</a>
+							<ul>
+								<li><a href="tutorial_compatibility.html">Compatibility</a></li>
+								<li><a href="tutorial_suman.html">Functional Suitability</a></li>
+								<li><a href = "tutorial-reliability.html">Reliability Metrics</a></li> 
+							</ul>
+						</li-->
+						<li><a href="#">Practice</a>
+							<ul>
+								<li><a href="Learn.html">Code Quality Analysis</a></li>
+								<li><a href="ex_html_css_js.html">Practice JS</a></li>
+								<li><a href="CP.html">Cyclomatic Complexity Practice</a></li>
+							</ul>
+						</li>
+						<li><a href="quiz.html">Quiz</a></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+		<div class="div_para">
+			<h2>Reliability Metrics</h2>
+			<p class="para">Reliability Metrics allow us to quantitatively judge a product based on its reliability. A lot of reliability metrics are available and they can be used depending upon the type of system to which it applies & the requirements of the application domain. Some are listed below
+			</p>
+			<ul>
+				<li><b>1. Mean Time to Failure (MTTF) - </b>MTTF is described as the time interval between the two successive failures. The time units are entirely dependent on the system & it can even be stated in the number of transactions.</li>
+				<li><b>2. Mean Time to Repair (MTTR) - </b>Once failure occurs, some-time is required to fix the error. MTTR measures the average time it takes to track the errors causing the failure and to fix them.</li>
+				<li><b>3. Mean Time Between Failure (MTBF) - </b>We can merge MTTF & MTTR metrics to get the MTBF metric.
+
+                  MTBF = MTTF + MTTR
+
+Thus, an MTBF of 300 denoted that once the failure appears, the next failure is expected to appear only after 300 hours. In this method, the time measurements are real-time & not the execution time as in MTTF.</li>
+			</ul>
+			<br />
+			<div>
+				<button class="btn btn-primary LearnBySlides" type="submit" onclick="showSlides()"><b>Learn By Slides</b></button>
+				<button class="btn btn-primary LearnByVideo" type="submit" onclick = "popupvid()"><b>Watch Video</b></button>
+			</div>
+			<hr />
+			<div class="main" id = "slides-id" style="display: none;">
+				<div class="slider" id="slider">
+					<div class="slides current">
+						<h1>Mean Time to Failure (MTTF)</h1>
+						<p style = "text-align: center; padding-top: 50px; padding-right: 70px; padding-bottom: 50px; padding-left: 80px; ">MTTF is described as the time interval between the two successive failures. An MTTF of 200 mean that one failure can be expected each 200-time units. The time units are entirely dependent on the system & it can even be stated in the number of transactions. MTTF is consistent for systems with large transactions.
+For example, It is suitable for computer-aided design systems where a designer will work on a design for several hours as well as for Word-processor systems.
+To measure MTTF, we can evidence the failure data for n failures. Let the failures appear at the time instants t1,t2.....tn.
+MTTF can be calculated as <br /> <br />
+						<img src = "resources/css/img/mttf.jpg"></img>
+						<br /> <br />
+					</p>
+					</div>
+				<div class="slides">
+					<h1>Mean Time to Repair (MTTR)</h1>
+					<p style = "text-align: center; padding-top: 50px; padding-right: 70px; padding-bottom: 50px; padding-left: 80px; ">Mean time to repair (MTTR) is a maintenance metric that measures the average time required to troubleshoot and repair failed equipment. It reflects how quickly an organization can respond to unplanned breakdowns and repair them.
+MTTR calculates the period between the start of the incident and the moment the system returns to production. It can be calculated as : <br /><br />
+					<img src = "resources/css/img/mttr.png" style = "height :120px; width = auto" ></img>
+					<br /> <br />
+					</p>
+				</div>
+				<div class="slides">
+					<h1>Mean Time Between Failure (MTBF)</h1>
+					<p style = "text-align: center; padding-top: 50px; padding-right: 70px; padding-bottom: 50px; padding-left: 80px; ">
+					We can merge MTTF & MTTR metrics to get the MTBF metric.
+Thus, an MTBF of 300 denotes that once the failure appears, the next failure is expected to appear only after 300 hours. With this method, the time measurements are real-time & not the execution time as in MTTF.
+<h3>MTBF = MTTF + MTTR</h3>
+					<br /> <br />
+					</p>
+				</div>
+			</div>
+			<i class="fa fa-angle-left prev" id="prev"><img alt="left" src="images/left.png"/></i>
+			<i class="fa fa-angle-right next" id="next"><img alt="right" src="images/right.png"/></i>
+		  </div>
+		  <br /> <br />
+		  <div class="embed_container" id = "popupvid-id" style="display: none;">
+				<iframe class="embed_video" width="600" height="400" src="https://www.youtube.com/embed/OSnBQraYlkA">
+				</iframe>			
+			</div>
+		</div>
+		<!--<div class = "tutorial-video">
+			<video src = "resources/videos/MTTR.mp4" controls = "true"></video>
+			<img src = "resources/img/close.png" class = "close" onclick = "toggler();">
+		</div> -->
+		<script src="js/jquery.js"></script>
+		<script src = "resources/js/slider.js"></script>
+		<script type = "text/javascript">
+			
+			function showSlides() { 
+				document.getElementById("popupvid-id").style.display = "none";
+				document.getElementById("slides-id").style.display = "block"; 
+	  
+			} 
+			function popupvid() {
+				/*var popup = document.getElementById("vid-pop");
+				popup.classList.toggle("show-vid");
+
+				if (popup.paused){ 
+					popup.play(); 
+				}
+				else { 
+					popup.pause();
+				}*/
+				
+				document.getElementById("slides-id").style.display = "none";
+				document.getElementById("popupvid-id").style.display = "block";
+			}
+	  
+		</script>
+	</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset = "UTF-8">
+		<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+		<meta http-equiv = "X-UA-Compatible" content = "ie-edge">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<title>Product Quality</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<div class="div1">
+			<span class="heading1"><b>VLAB - Product Quality</b></span>
+		</div>
+		<div class="div2">
+			<nav>
+				<div class="container">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<!--li><a href="#">Tutorials</a>
+							<ul>
+								<li><a href="tutorial_compatibility.html">Compatibility</a></li>
+								<li><a href="tutorial_suman.html">Functional Suitability</a></li>
+								<li><a href = "tutorial-reliability.html">Reliability Metrics</a></li> 
+							</ul>
+						</li-->
+						<li><a href="#">Practice</a>
+							<ul>
+								<li><a href="Learn.html">Code Quality Analysis</a></li>
+								<li><a href="ex_html_css_js.html">Practice JS</a></li>
+							</ul>
+						</li>
+						<li><a href="quiz.html">Quiz</a></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+		<div class="div_para">
+			<h2>Security</h2>
+			<p class="para">Degree to which a product or system protects information and data so that persons or other products or systems have the degree of data access appropriate to their types and levels of authorization</p>
+			<div class="embed_container">
+				<iframe class="embed_video" width="600" height="400" src="https://www.youtube.com/embed/CPyhYF--GCw">
+				</iframe>			
+			</div>
+			<br/>
+			<p>This characteristic is composed of the following sub-characteristics:</p>
+			<ul>
+				<li><b>Confidentiality - </b>Degree to which a product or system ensures that data are accessible only to those authorized to have access.</li>
+				<li><b>Integrity - </b>Degree to which a system, product or component prevents unauthorized access to, or modification of, computer programs or data.</li>
+				<li><b>Non-repudiation - </b>Degree to which actions or events can be proven to have taken place so that the events or actions cannot be repudiated later.</li>
+				<li><b>Accountability - </b>Degree to which the actions of an entity can be traced uniquely to the entity.</li>
+				<li><b>Authenticity - </b>Degree to which the identity of a subject or resource can be proved to be the one claimed.</li>
+			</ul>			
+			<!--div class="loading" id="loader"></div>
+			<div id="loading_id" style="margin:0;">
+
+				<div style="display:none;" id="myDiv" class="animate-bottom">
+				  <img class="delay" alt="func_suit_char" src="images/func_suit_table.png"/>
+				  <img class="delay" alt="func_suit_char" src="images/table1.png"/>
+				  <img class="delay" alt="func_suit_char" src="images/table2.png"/>
+				</div>
+
+				<script>
+					var myVar;
+					function myFunction() {
+					  myVar = setTimeout(showPage, 500);
+					}
+					function showPage() {
+					  document.getElementById("loader").style.display = "none";
+					  document.getElementById("myDiv").style.display = "block";
+					}
+				</script>
+			</div>
+			<script type="text/javascript">
+			   myFunction('loading_id');
+			</script>
+			<p class="para">
+				<br>&emsp;The  functional  suitability  value  is  obtained  from  these  subcharacteristics  through  a  profiling  function.  
+				The profiling function can get a result from a collection of values, avoiding problems caused by other functions such as 
+				mean or median. Moreover, the profiling function can change the scale of input and output values (that is,  input  values  
+				subcharacteristics  [0-100]  and  output  value  functional  suitability  [1-5]).  To  understand  the  profiling function 
+				it is necessary to know the concepts: <b>level</b>, <b>range</b>, and <b>profile</b>. The set of input values is divided into  intervals  called  
+				<b>levels</b>.  The  established  levels  are  shown in <b>Table 1</b>. 
+			</p>
+			<p class="para">
+				&emsp;The output of the profiling function (functional suit-ability value) is obtained from the ranges. The <b>range</b> is a vector. 
+				It indicates the maximum number or percentage of items (subcharacteristics) that must be in each level to get the output value 
+				(functional suitability value).
+			</p>
+			<p class="para">
+				&emsp;The  <b>profile</b>  is  the  vector  with  the  values  obtained  for  each  level.  For  example,  suppose  one  evaluates  
+				a  system  and  gets  the  following  values  for  functional  suitability  subcharacteristics:  23.5,  55.8,  and  87.9.  
+				Subcharacteristics are classified into levels depending on their value, as shown in Table 1. Therefore, a sub-characteristic  belongs  
+				to  level  1  (value  23.5),  another  subcharacteristic belongs to level 2 (55.8), and another subcharacteristic belongs to level 4. 
+				Thus, the system profile is (1, 1, 0, 1, 0): one subcharacteristic is in level 1, level 2, and level 4 and zero subcharacteristics are 
+				in level 3 and level 5.
+			</p>
+			<span><b>Sample Case Study (for Reference): </b></span>
+			<a href="https://www.aqclab.es/images/AQCLab/Noticias/SQP/software-quality-management-evaluation-of-software-product-functional-suitability-a-case-study.pdf" target="_blank">
+				Functional Suitability Case Study
+			</a-->
+		</div>
+		<script src="js/ace.js" type="text/javascript" charset="utf-8"></script>
+		<!--script>
+			function setEditor() {
+				window.eh = ace.edit("editor");
+				eh.setTheme("ace/theme/clouds");
+				eh.setMode("ace/mode/javascript");
+			}
+			setEditor();
+		</script-->
+		<script src="js/jquery.js"></script>
+	</body>
+</html>
